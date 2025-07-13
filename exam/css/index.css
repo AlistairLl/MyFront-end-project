@@ -1,0 +1,201 @@
+
+
+/* 页面的背景和内容定位 */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7789F6;
+    /* text-align: center; */
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+h1{
+  color: #111;
+}
+/* 界面切换原理 */
+.hidden{
+  display: none;
+}
+
+/* 开始考试的按钮样式 */
+  .start{
+    /* align-self: center; */
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: rgb(121, 146, 237);
+    padding: 20px 40px ;
+    margin: 0 ;
+    /* border: 5px solid rgb(14, 92, 236); */
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    /* text-align: center; */
+  }
+
+  /* 按钮样式 */
+  .button1{
+    position: relative;
+    /* left: 50%; */
+    background-color: rgb(255, 255, 255);
+    color:rgb(121, 146, 237);
+    border-radius:5px;
+    border: 1.5px solid rgb(121, 146, 237);
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    }
+    .button2{
+      position: relative;
+      /* left: 51%; */
+      color: rgb(255, 255, 255);
+      background-color:rgb(121, 146, 237);
+      border-radius:5px;
+      border: 1px solid rgb(121, 146, 237);
+      width: 100px;
+      height: 40px;
+      cursor: pointer ;
+      font-size: 15px;
+      }
+      button:hover{
+        background-color: rgba(113, 122, 245, 0.525);
+      }
+
+      /* 统一界面的样式 */
+      .box{
+        /* position: relative ; */
+        
+       padding: 20px;
+       max-width: 700px;
+       /* margin :100px auto; */
+       background-color: white;
+       border-radius: 5px;
+       box-shadow: 0 0 15px 2px rgba(0,0,0,0.5);
+   }
+   
+   
+
+
+/* 选项按钮的样式 */
+   #options button{
+    display: block;
+    margin:14px auto;
+    width:90%;
+    height: 52px;
+    background-color:#F3F7FD;
+    color:#333;
+    border:1.5px solid #C7DCF0;
+    cursor: pointer;
+    text-align:left ;
+    padding: 0 20px;
+    font-size: 20px;
+   
+    border-radius: 10px;
+   }
+     /* 未选择时的悬停效果 */
+     #options:not(.answered) button:hover {
+      background-color: #D5E5FC;
+  }
+   #options button:disabled{
+    cursor:not-allowed;
+   }
+
+
+
+   /* 为对错图标添加样式 */
+.correct-icon, .wrong-icon {
+    float: right;
+    font-size: 17px; /* 设置图标大小 */
+     /* 设置图标与文本之间的间距 */
+    vertical-align: middle; /* 垂直对齐图标和文本 */
+
+  }
+
+   .correct-icon {
+    color: green;/* 绿色对勾 */
+   
+}
+.wrong-icon {
+    color: red;/* 红色叉号 */
+    
+}
+
+/* 计时器的样式在这里 */
+   #timer{
+    /* margin-top: 20px; */
+    /* font-size: 18px; */
+    color: #053a97;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px 13px;
+    margin-top: 0px;
+    margin-right: 15px;
+    /* width: 175px;
+    height: 55px; */
+    background-color: #D5E5FD;
+    border-radius: 5px;
+    border: 1.5px solid #5fadf556;
+   }
+
+   #next-button{
+    margin-top: 20px;
+   }
+
+
+/* 答题界面的头部样式 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ /* background-color: #f5f5f5;  标题区域灰色背景 */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 分割线的样式 */
+hr{
+  color: rgb(228, 226, 226);
+  background-color: rgb(221, 220, 220);
+  height: 1.5px;
+  border: none;
+
+
+}
+/* 倒计时的样式 */
+.timeleft{
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  /* width: 50px;
+  height: 35px; */
+  margin-left: 5px;
+  /* margin-right: 0; */
+  border-radius: 5px;
+
+}
+
+/* 进度条样式 */
+.progress-bar {
+  height: 5px;
+  background-color: #7C8CF3;
+  border-radius: 1px;
+  width: 0;
+  /* transition: width 1s linear; */
+  
+}
+
+
+/* 结算界面 */
+.end{
+  text-align:center;
+  /* padding:30px 135px; */
+  width: 500px;
+  height: 400px;
+
+}

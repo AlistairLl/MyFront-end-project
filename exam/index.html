@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小测试</title>
+<!-- 引入css -->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body >
+<!-- 开始界面 -->
+    <div id="start-screen" class="box" style="background-color: #7789F6;box-shadow: 0 0 0 0 rgba(0,0,0,0.5);" >
+        <!-- <h1>欢迎参加前端练习小考试</h1>
+        <p>请点击下面按钮开始考试</p>  -->
+        <!-- <button class="start" onclick="alert('Hello world!')" >开始考试</button> -->
+        <div id="start-button" class="start" >开始考试</div>
+    </div>  
+   
+   <!-- 考试须知界面 -->
+    <div id="instructions-screen" class="box hidden" style="width: 550px; padding: 0; height: 320px;">
+        <h2 style="text-align: center ;padding-top: 5px; ">考试须知</h2>
+        <hr>
+        <ol style="font-size: 20px;line-height: 33px; text-align:left;">
+            <li>每一个题目有<strong style="color: rgb(121, 146, 237)"> 15 秒 </strong>的答题时间。</li>
+            <li>一旦选择了答案，则无法取消/修改。</li>
+            <li>一旦倒计时结束，则不能选择关于本题的任何选项。</li>
+            <li>诚信考试，禁止抄袭。</li>
+        </ol>
+        <hr>
+        <!-- 开始或者退出考试按钮 -->
+        <div style="text-align: right;padding-right: 30px;padding-top: 5px;">
+          <button id="exit-button" class="button1">退出考试</button>
+          <button id="continue-button" class="button2">继续考试</button>
+        </div>
+    </div>
+
+    <!-- 答题界面 -->
+    <div id="question-screen" class="box hidden" style="padding: 0; width: 650px;">
+      <!-- 答题界面头部 -->
+      <div class="header">
+        <h2 style=" display: inline-block;margin-left:30px ; " >考试小应用</h2>
+        <div id="timer" >剩余时间 <div id="time-left" class="timeleft">15</div> </div>
+      </div> 
+      <!-- 进度条在此 -->
+      <div class="progress-bar" id="progressBar"></div> 
+      <hr style="margin-top: 0;">
+      <!-- 题目内容部分 -->
+        <h1 id="question-text" style="margin-left: 35px;margin-right: 10px;"></h1>
+        <!-- 选项部分 -->
+        <div id="options"></div>
+        <hr style="margin-top: 40px; ;"> 
+        <!-- 进度展示 -->
+        <h3 style=" display: inline-block;margin: 15px 0 20px 35px; ">进度：<span id="question-number"></span> /5</h3>
+        
+        <button id="next-button" class="button2 hidden" style="float: right;margin: 5px 35px ;" >下一题</button>
+    </div>
+
+    <!-- 结果界面 -->
+    <div id="result-screen" class="box hidden" >
+      <div class="end">
+        <img src="./images/屏幕截图 2025-04-01 112421.png" >
+        <h2>您已经完成考试！</h2>
+        <p id="evaluation"></p>
+        <p>您得了 <strong><span id="score"></span></strong> 分，共 <strong>5</strong> 分。</p>
+        <!-- <p id="evaluation"></p> -->
+
+        <button id="restart-button" class="button2">重新考试</button>
+        <button id="exit-exam-button" class="button1">退出考试</button>
+      </div>
+    </div>
+
+
+<!-- 引入js -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
